@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+u1 = User.create :name => 'admin'
+
+Plane.destroy_all
+p1 = Plane.create :column => '3', :row => '15'
+
+Flight.destroy_all
+f1 = Flight.create :origin => 'Tuscon', :destination => 'Sydney', :date => '28/01/2018' 
+f2 = Flight.create :origin => 'Sydney', :destination => 'Tuscon', :date => '13/02/2018'
+
+u1.flights << f1
