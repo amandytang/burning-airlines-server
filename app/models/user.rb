@@ -10,4 +10,6 @@
 
 class User < ApplicationRecord
   has_and_belongs_to_many :flights
+  has_many :flight_users
+  has_many :reservations, through: :flight_users, source: :flight
 end

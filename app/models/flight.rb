@@ -12,6 +12,7 @@
 #
 
 class Flight < ApplicationRecord
-  belongs_to :plane, :optional => true 
+  belongs_to :plane, :optional => true
   has_and_belongs_to_many :users
+  has_many :flight_users
 end
