@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :planes
   resources :users
-  resources :flightusers
+  resources :flight_users
 
   resources :flights
   resources :flights do
