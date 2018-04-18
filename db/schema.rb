@@ -32,6 +32,11 @@ ActiveRecord::Schema.define(version: 20180417062412) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "flights_users", force: :cascade do |t|
+    t.integer "flight_id"
+    t.integer "user_id"
+  end
+
   create_table "planes", force: :cascade do |t|
     t.integer "column"
     t.integer "row"
